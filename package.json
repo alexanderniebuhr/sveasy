@@ -1,0 +1,37 @@
+{
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/alexanderniebuhr/sveasy/issues"
+  },
+  "peerDependencies": {
+    "esbuild": "^0.8.56",
+    "svelte": "^3.35.0"
+  },
+  "dependencies": {
+    "esbuild": "^0.8.56",
+    "svelte": "^3.35.0"
+  },
+  "description": "",
+  "devDependencies": {
+    "standard": "*"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "homepage": "https://github.com/alexanderniebuhr/sveasy#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "name": "sveasy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderniebuhr/sveasy.git"
+  },
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --outfile=lib/index.js --platform=node --format=cjs --external:esbuild --external:svelte --target=node10",
+    "build:compressed": "esbuild src/index.js --bundle --outfile=lib/index.js --platform=node --format=cjs --external:esbuild --external:svelte --minify --target=node10",
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "version": "1.0.0"
+}
