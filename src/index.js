@@ -7,7 +7,7 @@ export const main = () => {
   if (argv[0] !== 'dev' && argv[0] !== 'build') throw new Error('invalid arguments')
   if (argv[0] === 'dev') {
     console.log('serving in dev mode')
-    console.log(server())
+    server()
   } else if (argv[0] === 'build') {
     console.log('building in prod mode')
     builder()
